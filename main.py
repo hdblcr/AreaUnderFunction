@@ -1,10 +1,12 @@
+import math
+
 def fnctn(x):
-  return x*x
+  return math.sin(x)
 
 class Graph:
   def __init__(self, steps):
     self.steps = steps
-    self.max = 100;
+    self.max = 4 * math.pi
     self.title = "Steps: " + str(steps)
     self.plotX = []
     self.plotY = []
@@ -40,7 +42,7 @@ class Graph:
   def printToFile(self):
     print(self.plotY)
     writeme = ""
-    f = open("xSquared/" + str(self.steps) + ".txt", "w")
+    f = open("sinX/" + str(self.steps) + ".txt", "w")
     for i in range(len(self.plotX)):
       writeme += str(self.plotX[i]) + ","
     writeme = removeLastComma(writeme)
@@ -62,7 +64,7 @@ class Graph:
     f.close
 
 def updateDataFile(x):
-  f = open("xSquared/filelist.txt", "a")
+  f = open("sinX/filelist.txt", "a")
   f.write(str(x)+".txt~")
   f.close
 
@@ -73,7 +75,7 @@ def removeLastComma(writeme):
 
 def main():
   graphs = []
-  f = open("xSquared/filelist.txt", "w")
+  f = open("sinX/filelist.txt", "w")
   f.close
 
   # count by 5's till 20
@@ -82,6 +84,7 @@ def main():
     # update data file 
     updateDataFile(i)
 
+def dummy():
   # count by 10's till 100
   for i in range(20, 100, 10):
     graphs.append(Graph(i))

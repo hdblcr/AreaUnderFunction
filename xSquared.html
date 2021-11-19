@@ -7,22 +7,18 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
   </head>
-  <body>
-    <script src="custom.js"></script>
-  
-    <form name="plot" onsubmit="main(); return false;">
-      <label>Function: </label>
-      <input type="text" name="func" id="formFunc" value="Math.sin(x)" />
-      <br />
-      <label>Function min: </label>
-      <input type="text" name="min" id="formMin" value="0" />
-      <br />
-      <label>Function max: </label>
-      <input type="text" name="max" id="formMax" value="4*Math.PI" />
-      <br />
+  <body onload="main()">
+    <div onclick="xSquared()"></div>
+    <div onclick="sinX()"></div>
+    <script src="script.js"></script>
+    <!--
+    <form name="plot" onsubmit="return main()">
+      <input type="file">
+      <label>Number of Steps: </label>
+      <input type="number" name="numSteps" value="5" />
       <input type="submit" value="Build Plot">
     </form>  
-    
+     -->
     <div id="plot"></div>
     <div id="thresholdNum"></div>
     <div id="rawdata"></div>
