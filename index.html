@@ -9,19 +9,43 @@
   </head>
   <body>
     <script src="custom.js"></script>
-  
+    <header><h1>Riemann Sum Animation</h1></header>
+
+    <div id="instructions">
+      <h3>Instructions</h3>
+      Some common functions:
+    </div>
+      <ul id="instructionsLeft">
+        <li>For addition, write <code>+</code></li>
+        <li>For subtraction, write <code>-</code></li>
+        <li>For multiplication, write <code>*</code></li>
+        <li>For division, write <code>/</code></li>
+        <li>For &#960;, write <code>Math.PI</code></li>
+      </ul>
+      <ul id="instructionsRight">
+        <li>For x<sup>2</sup>, write <code>Math.pow(x,2)</code></li>
+        <li>For ln(x), write <code>Math.log(x)</code> </li>
+        <li>For log<sub>y</sub>(x), write <code>Math.log(x)/Math.log(y)</code></li>
+        <li>For sin(x), write <code>Math.sin(x)</code></li>
+        <li>For cos(x), write <code>Math.cos(x)</code></li>
+      </ul>
+    
+    <div id="form">
+    <h3>Build Animation</h3>
     <form name="plot" onsubmit="main(); return false;">
       <label>Function: </label>
-      <input type="text" name="func" id="formFunc" value="Math.sin(x)" />
+      <input type="text" name="func" id="formFunc" value="Math.cos(x)" />
       <br />
       <label>Function min: </label>
       <input type="text" name="min" id="formMin" value="0" />
       <br />
       <label>Function max: </label>
-      <input type="text" name="max" id="formMax" value="4*Math.PI" />
+      <input type="text" name="max" id="formMax" value="2*Math.PI" />
       <br />
       <input type="submit" value="Build Plot">
     </form>  
+    </div>
+
     
     <div id="plot"></div>
     <div id="thresholdNum"></div>
