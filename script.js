@@ -1,6 +1,6 @@
 
 class MyPlot{
-  constructor(dataList, steps){
+  constructor(dataList, steps, max, name){
     const dl = dataList.split("~");
     this.steps = steps.split(".")[0];
     this.plotX = dl[0].split(",");
@@ -10,7 +10,8 @@ class MyPlot{
 
     this.overArea = dl[4];
     this.upArea = dl[5];
-    this.max = 100;
+    this.max = max;
+    this.name = name;
   }
   
   buildPlot(){
@@ -22,7 +23,7 @@ class MyPlot{
     var trace1 = {
       x: this.fX,
       y: this.fY,
-      name: "x<sup>2</sup>"
+      name: this.name
     };
     
     var trace2 = {

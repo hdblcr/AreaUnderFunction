@@ -1,3 +1,34 @@
 body {
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-areas: 
+    'header header' 
+    'instructions instructions'
+    'instructionsLeft instructionsRight' 
+    'form form'
+    'plot plot';
+}
+#instructions{
+  grid-area: instructions;
+}
+#instructionsLeft{
+  grid-area: instructionsLeft;
+}
+#instructionsRight{
+  grid-area: instructionsRight;
+}
+#form {
+  grid-area: form;
+}
+header {
+  grid-area: header;
+}
+#plot {
+  grid-area: plot;
+}
+code, #formFunc, #formMin, #formMax {
+  background: black;
+  color: #00ff00;
+  padding: 2px;
+  font-family: consolas, monospace;
 }
