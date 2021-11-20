@@ -13,7 +13,7 @@
 
     <div id="instructions">
       <h3>Instructions</h3>
-      Some common functions:
+      Some common functions and constants (click <a href="https://www.w3schools.com/js/js_math.asp">here</a> for more):
     </div>
       <ul id="instructionsLeft">
         <li>For addition, write <code>+</code></li>
@@ -23,11 +23,11 @@
         <li>For &#960;, write <code>Math.PI</code></li>
       </ul>
       <ul id="instructionsRight">
+        <li>For \emph(e), write <code>Math.E</code></li>
         <li>For x<sup>2</sup>, write <code>Math.pow(x,2)</code></li>
         <li>For ln(x), write <code>Math.log(x)</code> </li>
         <li>For log<sub>y</sub>(x), write <code>Math.log(x)/Math.log(y)</code></li>
         <li>For sin(x), write <code>Math.sin(x)</code></li>
-        <li>For cos(x), write <code>Math.cos(x)</code></li>
       </ul>
     
     <div id="form">
@@ -43,9 +43,15 @@
       <input type="text" name="max" id="formMax" value="2*Math.PI" />
       <br />
       <input type="submit" value="Build Plot">
+      <input type="button" value="Pause" onclick="pause(); return false;">
+      <input type="button" value="Resume" onclick="resume(); return false;">
+      <input type="button" value="Restart" onclick="restart(); return false;">
     </form>  
     </div>
 
+    <div id="buttons">
+    
+    </div>
     
     <div id="plot"></div>
     <div id="thresholdNum"></div>
